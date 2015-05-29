@@ -1,0 +1,4 @@
+[16-Mar-2015 12:10:50 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/solutech/public_html/icpak/application/views/includes/profile-side.php on line 4
+[16-Mar-2015 12:13:10 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/solutech/public_html/icpak/application/views/includes/profile-side.php on line 4
+[11-Apr-2015 07:12:28 America/Chicago] PHP Parse error:  syntax error, unexpected T_IF in /home/solutech/public_html/icpak/application/controllers/auth.php on line 413
+[11-Apr-2015 07:12:56 America/Chicago] PHP Parse error:  syntax error, unexpected T_IF in /home/solutech/public_html/icpak/application/controllers/auth.php on line 413
