@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost:8030/icpak/';
+$config['base_url']	= 'http://solutech.co.ke:8030/icpak/';
 
 /*
 |--------------------------------------------------------------------------

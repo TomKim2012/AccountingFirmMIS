@@ -1,5 +1,4 @@
 <?php
-
 if (! defined ( 'BASEPATH' ))
 	exit ( 'No direct script access allowed' );
 class Auth extends CI_Controller {
@@ -24,12 +23,12 @@ class Auth extends CI_Controller {
 		} else {
 			$data ['msg'] = "";
 		}
-		$this->load->view ( 'login_page', $data );
+		$data ['main_content'] = 'login_page';
+		$this->load->view ( 'includes/template', $data );
 	}
+	
 	// This Function helps u add a new User
-	public function signup($msg = NULL) 
-
-	{
+	public function signup($msg = NULL) {
 		$this->_set_fields ();
 		$data ['main_content'] = 'signup';
 		$this->load->view ( 'includes/template', $data );
@@ -59,7 +58,7 @@ class Auth extends CI_Controller {
 					"Content-type: application/json" 
 			) );
 			curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, false ); // curl error SSL certificate problem, verify that the CA cert is OK
-			                                                 // curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+			                                                    // curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 			curl_setopt ( $ch, CURLOPT_TIMEOUT, 400 );
 			// curl_setopt($ch, CURLOPT_POST, count($postData));
 			// curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
@@ -103,12 +102,12 @@ class Auth extends CI_Controller {
 				curl_close ( $ch );
 			} else {
 				
-				// $msg = '<font color=red>Invalid email address and/or password.</font><br />';
+			    $msg = 'Invalid email address and/or password.<br />';
 				// echo $jsonresponce->message;
-				$msg = $jsonresponce->message;
-				$data ['msg'] = $msg;
-				// $data['main_content']='login_page';
-				$this->load->view ( 'login_page', $data );
+				//$msg = $jsonresponce->message;
+				$data ['msg'] = $msg . '(' .$jsonresponce->status . ')' ;
+				$data ['main_content'] = 'login_page';
+				$this->load->view ( 'includes/template', $data );
 				//
 				
 				curl_close ( $ch );
@@ -122,7 +121,6 @@ class Auth extends CI_Controller {
 		$msg = '<font color=blue>You Are Logged Out<br />';
 		redirect ( 'auth' );
 	}
-	
 	function do_register() {
 		$this->_set_fields ();
 		// set validation properties

@@ -1,95 +1,66 @@
-    <div class="container-fluid">
-      <div class="row">
-      <?php $this->load->view('includes/sidebar') ?>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h4 class="page-header">Dashboard</h4>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-          </div>
-
-          <h2 class="sub-header">Section title</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                
-                
-                
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  
+<div class="row ng-scope">
+	<div class="col-lg-3 col-sm-6">
+		<!-- START widget-->
+		<div class="panel widget bg-primary">
+			<div class="row row-table">
+				<div class="col-xs-4 text-center bg-primary-dark pv-lg">
+					<em class="icon-cloud-upload fa-3x"></em>
+				</div>
+				<div class="col-xs-8 pv-lg">
+					<div class="h2 mt0">1700</div>
+					<div class="text-uppercase">Uploads</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-sm-6">
+		<!-- START widget-->
+		<div class="panel widget bg-purple">
+			<div class="row row-table">
+				<div class="col-xs-4 text-center bg-purple-dark pv-lg">
+					<em class="icon-globe fa-3x"></em>
+				</div>
+				<div class="col-xs-8 pv-lg">
+					<div class="h2 mt0">
+						700 <small>GB</small>
+					</div>
+					<div class="text-uppercase">Quota</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<!-- START widget-->
+		<div class="panel widget bg-green">
+			<div class="row row-table">
+				<div class="col-xs-4 text-center bg-green-dark pv-lg">
+					<em class="icon-bubbles fa-3x"></em>
+				</div>
+				<div class="col-xs-8 pv-lg">
+					<div class="h2 mt0">500</div>
+					<div class="text-uppercase">Reviews</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 col-sm-12">
+		<!-- START date widget-->
+		<div class="panel widget">
+			<div class="row row-table">
+				<div class="col-xs-4 text-center bg-green pv-lg">
+					<!-- See formats: https://docs.angularjs.org/api/ng/filter/date-->
+					<now format="MMMM" class="text-sm">May</now>
+					<br>
+					<now format="d" class="h2 mt0">30</now>
+				</div>
+				<div class="col-xs-8 pv-lg">
+					<now format="EEEE" class="text-uppercase">Saturday</now>
+					<br>
+					<now format="h:mm" class="h2 mt0">3:35</now>
+					<now format="a" class="text-muted text-sm">PM</now>
+				</div>
+			</div>
+		</div>
+		<!-- END date widget    -->
+	</div>
+</div>

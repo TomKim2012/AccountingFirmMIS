@@ -1,10 +1,13 @@
 /*
  * Base structure
  */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
+.navbar-header a.brand {
+	width: 260px;
+	height: 86px;
+	/* display: inline-block; */ /* box-shadow: 3px 4px 7px 3px #383838; */
+	float: none;
+	text-align: center;
+	margin: 0px 297px;
 }
 
 
